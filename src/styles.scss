@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import
+"assets/scss/normalize",
+"assets/scss/reset";
+
+@import
+"assets/scss/varaibles/variables";
+
+@import
+"assets/scss/globals/paddings",
+"assets/scss/globals/margins",
+"assets/scss/globals/colors";
