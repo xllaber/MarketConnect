@@ -1,2 +1,5 @@
-.banner {
+@import "../../assets/scss/utilities/mixins";
+.text-shadow {
+  //text-shadow: black 1px 0 10px;
+  @include text-shadow(black);
 }
