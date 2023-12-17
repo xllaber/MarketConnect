@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Category} from "../models/category";
+import {CATEGORIES} from "../models/CATEGORIES";
 
 @Component({
   selector: 'app-home',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  heroBanner: string = "assets/img/kitcehn.jpg";
+  categories: Category[] = CATEGORIES;
 
 }
