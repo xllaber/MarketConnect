@@ -1,7 +1,38 @@
-.position-absolute {
-  position: absolute;
-  &--on-top {
-    z-index: 100;
-    top: 20px;
+@each $position, $values in $positions {
+  @for $i from 1 through length($values) {
+    :root {
+      --#{$position}-#{$i}: #{nth($values, $i)}
+    }
+  }
+}
+
+@for $i from 1 through length($z-index) {
+  :root {
+    --z-index-#{$i}: #{nth($z-index, $i)}
+  }
+}
+
+@for $i from 1 through length($z-index) {
+  z-index {
+    z-index: nth($z-index, $i);
+  }
+}
+
+.position {
+  &--absolute{
+    position: absolute;
+    //&-on-top {
+    //  z-index: var(--z-index-12);
+    //}
+  }
+  &--relative {
+    position: relative;
+  }
+  @each $position, $values in $positions {
+    @for $i from 1 through length($values) {
+      &--#{$position}-#{$i} {
+        #{$position}: nth($values, $i);
+      }
+    }
   }
 }
