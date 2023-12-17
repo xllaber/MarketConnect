@@ -1,0 +1,14 @@
+.columns {
+  display: grid;
+  //padding: 20px;
+  &--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &--4 {
+    //width: 400px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

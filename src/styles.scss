@@ -1,11 +1,25 @@
 @import
-"assets/scss/normalize",
-"assets/scss/reset";
+"assets/scss/base/normalize",
+"assets/scss/base/reset",
+"assets/scss/base/font-family";
 
 @import
-"assets/scss/varaibles/variables";
+"assets/scss/utilities/variables";
 
 @import
 "assets/scss/globals/paddings",
 "assets/scss/globals/margins",
-"assets/scss/globals/colors";
+"assets/scss/globals/colors",
+"assets/scss/globals/font-size",
+"assets/scss/globals/border-radius";
+
+@import
+"assets/scss/layouts/flex",
+"assets/scss/layouts/fit",
+"assets/scss/layouts/columns",
+"assets/scss/layouts/position";
+
+@import
+"assets/scss/components/section",
+"assets/scss/components/main",
+"assets/scss/components/title";
