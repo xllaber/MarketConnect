@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
-  img: string = "assets/img/logo_min.png"
+  img: string = "assets/img/logo-full3.png"
   iconColor:string = getComputedStyle(document.documentElement).getPropertyValue("--alternative-4");
 
 }
