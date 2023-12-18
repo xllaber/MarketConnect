@@ -1,0 +1,12 @@
+@import '../utilities/mixins';
+.card {
+  --card-shadow-color: var(--gray-9);
+  --card-margin: var(--margin-9);
+  --card-border-radius: var(--radius-5);
+  --card-bg-color: var(--primary-5);
+
+  @include box-shadow(var(--card-shadow-color));
+  margin: var(--card-margin);
+  border-radius: var(--card-border-radius);
+  background-color: var(--card-bg-color);
+}
