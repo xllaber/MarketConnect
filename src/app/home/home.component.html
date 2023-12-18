@@ -1,13 +1,14 @@
 <main class="main">
   <div class="section">
-    <div class="title margin-y-10">
-      <!--    <div class="banner-gradient"></div>-->
-      <!--    <img [src]="heroBanner" alt="banner" class="hero-banner">-->
-      Nuestros productos
+    <div class="position position--relative">
+      <img [src]="heroBanner" alt="banner" class="object-fit object-fit--cover">
+      <span class="title position position--absolute position--left-13 position--top-14 z-index-12 color-white-5 text-shadow">
+        Nuestros<br>productos
+      </span>
     </div>
-    <div class="columns columns--4 margin-y-8">
+    <div class="columns columns--4 margin-y-2">
       <div *ngFor="let category of categories">
-        <div class="margin-9 box-shadow border-radius-5 bg-color-primary-5">
+        <div class="card">
           <img [src]="category.img" alt="image" class="object-fit object-fit--contain border-radius-top-5">
           <div class="category-title padding-y-5 border-radius-bottom-5">{{category.name}}</div>
         </div>

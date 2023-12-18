@@ -9,7 +9,7 @@ import {CATEGORIES} from "../models/CATEGORIES";
 })
 export class HomeComponent {
 
-  heroBanner: string = "assets/img/kitcehn.jpg";
+  heroBanner: string = "assets/img/hero-banner.png";
   categories: Category[] = CATEGORIES;
 
 }
