@@ -1,1 +1,11 @@
-<p>category works!</p>
+<div>
+  <div class="title title--category margin-y-10">{{category.name}}</div>
+  <div class="columns columns--4">
+    <div *ngFor="let product of category.products">
+      <div class="card">
+        <img [src]="product.img" alt="image" class="object-fit object-fit--contain border-radius-top-5 product-img">
+        <div class="card-title padding-y-5 border-radius-bottom-5">{{product.name}}</div>
+      </div>
+    </div>
+  </div>
+</div>
