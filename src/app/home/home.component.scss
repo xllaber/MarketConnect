@@ -5,6 +5,11 @@
   @include box-shadow(var(--shadow-color))
 }
 
+.text-shadow{
+  --shadow-color: var(--gray-9);
+  @include text-shadow(var(--shadow-color))
+}
+
 .category-title {
   text-align: center;
   font-size: var(--font-size-6);
