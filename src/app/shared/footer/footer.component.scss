@@ -1,0 +1,22 @@
+.footer{
+  --footer-bg-color: var(--primary-5);
+  --footer-padding: var(--padding-6);
+
+  background-color: var(--footer-bg-color);
+  padding: var(--footer-padding);
+  display: flex;
+  justify-content: space-around;
+  &__logo {
+    height: 100px;
+    width: 300px;
+  }
+  &__text {
+    --footer-text-font-size: var(--font-size-6);
+    --footer-text-color: var(--white-5);
+
+    display: flex;
+    align-items: center;
+    font-size: var(--footer-text-font-size);
+    color: var(--footer-text-color);
+  }
+}
