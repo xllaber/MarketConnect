@@ -1,4 +1,4 @@
-<main class="main">
+
   <div class="section">
     <div class="position position--relative">
       <img [src]="heroBanner" alt="banner" class="object-fit object-fit--cover">
@@ -8,12 +8,12 @@
     </div>
     <div class="columns columns--4 margin-y-2">
       <div *ngFor="let category of categories">
-        <div class="card">
+        <div class="card" (click)="showCategory(category.id)">
           <img [src]="category.img" alt="image" class="object-fit object-fit--contain border-radius-top-5">
-          <div class="category-title padding-y-5 border-radius-bottom-5">{{category.name}}</div>
+          <div class="card-title padding-y-5 border-radius-bottom-5">{{category.name}}</div>
         </div>
       </div>
     </div>
   </div>
   <app-menu></app-menu>
-</main>
+
