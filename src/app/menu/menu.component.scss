@@ -1,5 +1,13 @@
 @import "../../assets/scss/utilities/mixins";
 .text-shadow {
-  //text-shadow: black 1px 0 10px;
   @include text-shadow(black);
+}
+
+.menu{
+  color: var(--white-5);
+}
+
+.menu:hover {
+  color: var(--primary-5);
+  cursor: pointer;
 }

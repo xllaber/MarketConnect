@@ -1,13 +1,13 @@
-@each $position, $values in $positions {
-  @for $i from 1 through length($values) {
-    :root {
+:root {
+  @each $position, $values in $positions {
+    @for $i from 1 through length($values) {
       --#{$position}-#{$i}: #{nth($values, $i)}
     }
   }
 }
 
-@for $i from 1 through length($z-index) {
-  :root {
+:root {
+  @for $i from 1 through length($z-index) {
     --z-index-#{$i}: #{nth($z-index, $i)}
   }
 }

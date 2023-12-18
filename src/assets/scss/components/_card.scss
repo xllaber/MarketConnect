@@ -9,4 +9,9 @@
   margin: var(--card-margin);
   border-radius: var(--card-border-radius);
   background-color: var(--card-bg-color);
+  transition: transform .2s;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
 }
