@@ -6,6 +6,7 @@
   padding: var(--footer-padding);
   display: flex;
   justify-content: space-around;
+  flex-wrap: nowrap;
   &__logo {
     height: 100px;
     width: 300px;

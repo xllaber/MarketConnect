@@ -1,1 +1,21 @@
-<p>product works!</p>
+<div class="columns columns--2 margin-y-10">
+  <div>
+    <img [src]="product.img" alt="product" class="side-img">
+  </div>
+  <div class="margin-x-10">
+    <div class="title">{{product.name | uppercase}}</div>
+    <div class="font-size-5 margin-y-4 key">Descripción:</div>
+    <div>
+      Se puede cultivar en cualquier época del año y se puede consumir fresca, cocida o frita.
+      Es rica en nutrientes y varios antioxidantes. También contiene bastante ácido oxálico, por lo que se ha de consumir con moderación.
+    </div>
+    <div class="font-size-5 margin-y-4 key">Información Nutricional:</div>
+    <div>
+      <p class="margin-y-4"><span class="key">Proteínas: </span> {{product.nutritionalInfo.proteins}}g</p>
+      <p class="margin-y-4"><span class="key">Hidratos de Carbono: </span> {{product.nutritionalInfo.carbohydrates}}g</p>
+      <p class="margin-y-4"><span class="key">Grasas: </span> {{product.nutritionalInfo.fat}}g</p>
+      <p class="margin-y-4"><span class="key">Calorías: </span> {{product.nutritionalInfo.kcal}}kcal</p>
+    </div>
+    <button class="buy-btn">Comprar</button>
+  </div>
+</div>

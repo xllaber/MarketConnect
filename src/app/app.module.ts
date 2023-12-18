@@ -9,6 +9,8 @@ import { CategoryComponent } from './category/category.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ProductComponent } from './product/product.component';
+import { MenuViewComponent } from './menu-view/menu-view.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { ProductComponent } from './product/product.component';
     CategoryComponent,
     MenuComponent,
     FooterComponent,
-    ProductComponent
+    ProductComponent,
+    MenuViewComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
