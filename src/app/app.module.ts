@@ -10,7 +10,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ProductComponent } from './product/product.component';
 import { MenuViewComponent } from './menu-view/menu-view.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,11 +23,12 @@ import {ReactiveFormsModule} from "@angular/forms";
     ProductComponent,
     MenuViewComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -19,6 +19,7 @@
     <div>
       Raciones:
       <input [formControl]="dishes" type="number" min="1" max="10" value="1">
+      <span> x {{dish.price}}&euro;</span>
       <button class="menu-btn margin-y-4" (click)="dishBuy(dish.name)">Comprar plato</button>
     </div>
   </div>
@@ -26,6 +27,7 @@
     <div>
       Raciones:
       <input [formControl]="portions" type="number" min="1" max="10" value="1">
+      <span> x {{dish.ingredientPrice}}&euro;</span>
       <button class="menu-btn margin-y-4" (click)="ingredientsBuy(dish.name)">Comprar ingredientes</button>
     </div>
   </div>

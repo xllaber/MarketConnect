@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnChanges, SimpleChanges} from '@angular/core';
 import {FormControl} from "@angular/forms";
 
 @Component({
@@ -18,6 +18,8 @@ export class MenuViewComponent {
           fat: 9,
           kcal: 193
         },
+        ingredientPrice: 5.25,
+        price: 3,
         img: "assets/img/dishes/ensalada-valenciana.jpg"
       },
       {
@@ -29,6 +31,8 @@ export class MenuViewComponent {
           fat: 21.1,
           kcal: 215
         },
+        ingredientPrice: 11,
+        price: 5.50,
         img: "assets/img/dishes/paella.jpg"
       },
       {
@@ -40,6 +44,8 @@ export class MenuViewComponent {
           fat: 3.5,
           kcal: 76
         },
+        ingredientPrice: 3.27,
+        price: 2,
         img: "assets/img/dishes/macedonia.jpg"
       }
     ]
@@ -50,6 +56,17 @@ export class MenuViewComponent {
 
   portions = new FormControl;
   dishes = new FormControl;
+  // totalPriceDishes: number = 0;
+  // totalPriceIngredients: number = 0;
+  //
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   this.totalPriceDishes = this.menu.dishes[0].price * this.dishes.getRawValue() +
+  //     this.menu.dishes[1].price * this.dishes.getRawValue() +
+  //     this.menu.dishes[2].price * this.dishes.getRawValue();
+  //   this.totalPriceIngredients = this.menu.dishes[0].price * this.portions.getRawValue() +
+  //     this.menu.dishes[1].price * this.portions.getRawValue() +
+  //     this.menu.dishes[2].price * this.portions.getRawValue();
+  // }
   dishBuy(name: string) {
     alert(`${this.dishes.getRawValue()} raciones de ${name} añadidas al carrito exitosamente`);
   }
