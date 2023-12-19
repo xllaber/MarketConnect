@@ -1,0 +1,32 @@
+<div class="title title--center margin-y-10">Menú del día</div>
+<div *ngFor="let dish of menu['dishes']" class="columns columns--5 dish-card">
+  <img [src]="dish.img" alt="plato" class="object-fit object-fit--contain border-radius-5">
+  <div class="flex flex--align-item-center flex--justify-content-center flex--direction-column">
+    <div>
+      <b>{{dish.name}}</b>
+    </div>
+    <div>
+      {{dish.description}}
+    </div>
+  </div>
+  <div class="flex flex--justify-content-center flex--direction-column">
+    <div><b>Proteínas:</b> {{dish["nutritionalInfo"].proteins}}g</div>
+    <div><b>Hidratos de carbono:</b> {{dish["nutritionalInfo"].carbohydrates}}g</div>
+    <div><b>Grasas:</b> {{dish["nutritionalInfo"].fat}}g</div>
+    <div><b>Calorías:</b> {{dish["nutritionalInfo"].kcal}}kcal</div>
+  </div>
+  <div class="flex flex--align-item-center">
+    <div>
+      Raciones:
+      <input [formControl]="dishes" type="number" min="1" max="10" value="1">
+      <button class="menu-btn margin-y-4" (click)="dishBuy(dish.name)">Comprar plato</button>
+    </div>
+  </div>
+  <div class="flex flex--justify-content-center flex--align-item-center">
+    <div>
+      Raciones:
+      <input [formControl]="portions" type="number" min="1" max="10" value="1">
+      <button class="menu-btn margin-y-4" (click)="ingredientsBuy(dish.name)">Comprar ingredientes</button>
+    </div>
+  </div>
+</div>
