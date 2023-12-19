@@ -16,6 +16,8 @@
       <p class="margin-y-4"><span class="key">Grasas: </span> {{product.nutritionalInfo.fat}}g</p>
       <p class="margin-y-4"><span class="key">Calorías: </span> {{product.nutritionalInfo.kcal}}kcal</p>
     </div>
-    <button class="buy-btn tramp">Comprar</button>
+    <span>Precio por unidad: {{ price }}&euro;</span>
+    <input [formControl]="units" type="number" min="1" max="10">
+    <button class="buy-btn tramp" (click)="addProduct()">Comprar</button>
   </div>
 </div>

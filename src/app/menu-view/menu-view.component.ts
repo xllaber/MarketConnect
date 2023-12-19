@@ -10,6 +10,7 @@ export class MenuViewComponent {
   menu: any = {
     dishes: [
       {
+        id: 1,
         name: "Ensalada Valeciana",
         description: "Ensalada típica de la terreta",
         nutritionalInfo: {
@@ -23,6 +24,7 @@ export class MenuViewComponent {
         img: "assets/img/dishes/ensalada-valenciana.jpg"
       },
       {
+        id: 3,
         name: "Paella Valenciana",
         description: "Plato insignia de Valencia",
         nutritionalInfo: {
@@ -36,6 +38,7 @@ export class MenuViewComponent {
         img: "assets/img/dishes/paella.jpg"
       },
       {
+        id: 2,
         name: "Macedonia",
         description: "Mezcla de frutas de temporada",
         nutritionalInfo: {
@@ -67,11 +70,13 @@ export class MenuViewComponent {
   //     this.menu.dishes[1].price * this.portions.getRawValue() +
   //     this.menu.dishes[2].price * this.portions.getRawValue();
   // }
-  dishBuy(name: string) {
-    alert(`${this.dishes.getRawValue()} raciones de ${name} añadidas al carrito exitosamente`);
+  dishBuy(name: string, id:number) {
+    alert(`${this.dishes.getRawValue()} raciones de ${name} añadidas al carrito exitosamente.
+    Total: ${this.dishes.getRawValue() * this.menu.dishes[id - 1].price}`);
   }
 
-  ingredientsBuy(name: string) {
-    alert(`${this.portions.getRawValue()} raciones de ${name} añadidas al carrito exitosamente`)
+  ingredientsBuy(name: string, id: number) {
+    alert(`${this.portions.getRawValue()} raciones de ${name} añadidas al carrito exitosamente.
+    Total: ${this.portions.getRawValue() * this.menu.dishes[id - 1].price}`);
   }
 }
